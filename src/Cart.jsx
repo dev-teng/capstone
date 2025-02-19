@@ -1,6 +1,12 @@
 function Cart () {
   return (
-    <h1>Weolcome to my cart</h1>
+    <div className="bg-secondary-subtle d-flex flex-column min-vh-100">
+
+    <div>
+      <h1 className="text-center m-5">Check out</h1>
+    </div>
+    
+</div>
   )
 }
 
