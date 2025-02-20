@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="bg-secondary-subtle d-flex flex-column min-vh-100 m-0">
       <div className="row g-0 mt-5">
-        <div className="col-md-5 mt-5 ms-5">
+        <div className="col-md-6 mt-5">
           <img className="img-fluid w-100 rounded" src={Allview} />
         </div>
         <div className="col-md-6 text-center">
