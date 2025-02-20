@@ -5,7 +5,7 @@ import chicken from "./images/chicken.avif";
 function Home() {
   return (
     <div className="bg-secondary-subtle d-flex flex-column min-vh-100 m-0">
-      <div className="row g-0">
+      <div className="row g-0 mt-5">
         <div className="col-md-6">
           <img className="img-fluid w-100" src={Allview} />
         </div>

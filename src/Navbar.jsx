@@ -4,7 +4,7 @@ import "./Header.css";
 function Navbar () {
   return(
     <>
-     <nav className="navbar navbar-expand-lg bg-body-secondary">
+     <nav className="navbar navbar-expand-lg bg-body-secondary fixed-top">
       <div className="container-fluid bg-dark p-1">
         <Link to="/" className="navbar-brand text-light fw-bold"><img className="img-fluid rounded-circle" src={Logo} style={{width: "2.9rem"}} /></Link>
         <button className="navbar-toggler collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
