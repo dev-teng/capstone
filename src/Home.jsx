@@ -1,4 +1,4 @@
-import Allview from "./images/Allview.jpg";
+import Allview from "./images/allview.jpg";
 import beef from "./images/beef.png";
 import pork from "./images/pork.png";
 import chicken from "./images/chicken.avif";
@@ -6,8 +6,8 @@ function Home() {
   return (
     <div className="bg-secondary-subtle d-flex flex-column min-vh-100 m-0">
       <div className="row g-0 mt-5">
-        <div className="col-md-6">
-          <img className="img-fluid w-100" src={Allview} />
+        <div className="col-md-5 mt-5 ms-5">
+          <img className="img-fluid w-100 rounded" src={Allview} />
         </div>
         <div className="col-md-6 text-center">
           <h2 className="m-5">Camping + Samgyup</h2>
