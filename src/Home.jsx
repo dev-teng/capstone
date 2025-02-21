@@ -3,25 +3,28 @@ import beefPlain from "./images/beefPlain.webp";
 import pork from "./images/pork.png";
 import chicken from "./images/chicken.avif";
 import "./Header.css";
+import AosAnimation from "./AosAnimtation";
 function Home() {
   return (
     <div className="bg-success-subtle d-flex flex-column min-vh-100 m-0">
       <div className="row g-0 mt-5">
-        <div className="col-md-6">
+        <div data-aos="fade-up" className="col-md-6">
           <img className="img-fluid w-100 rounded" src={Allview} />
+          <AosAnimation />
         </div>
-        <div className="col-md-6 text-center">
+        <div data-aos="fade-up" className="col-md-6 text-center">
           <h2 className="mt-5">Camping + Samgyup</h2>
           <h4 className="p-4 m-2 lh-base grill-chill">Grill, chill, and enjoy the thrill—camping meets samgyupsal for the perfect 
             bonding experience with family, friends, or loved ones.</h4>
           <h5 className="bg-dark p-5 rounded-circle m-2 lh-base text-white">For only 399 pesos per head, enjoy unlimited servings of beef, pork, 
             and chicken! A feast of tender, perfectly grilled meats just for you!</h5>
           <button className="btn btn-success btn-lg mt-3">Reserve Now</button>
+          <AosAnimation />
         </div>
         <div className="bg-dark p-2 mt-5 text-center text-light fw-bold fs-4">Main Dishes</div>
          <div className="row mt-5 mb-5 g-0">
 
-          <div className="col-md-4">
+          <div data-aos="fade-up" className="col-md-4">
             <div className="card h-100" >
               <img className="img-fluid" src={beefPlain} />
               <div className="card-body d-flex flex-column justify-content-between">
@@ -31,9 +34,10 @@ function Home() {
                 <button className="btn btn-success">Reserve now</button>
               </div>
             </div>
+            <AosAnimation />
           </div>
 
-          <div className="col-md-4" >
+          <div data-aos="fade-up" className="col-md-4" >
             <div className="card h-100" >
               <img className="img-fluid" src={pork} />
               <div className="card-body d-flex flex-column justify-content-between">
@@ -43,9 +47,10 @@ function Home() {
                 <button className="btn btn-success">Reserve now</button>
               </div>
             </div>
+            <AosAnimation />
           </div>
 
-          <div className="col-md-4">
+          <div data-aos="fade-up" className="col-md-4">
             <div className="card h-100" >
               <img className="img-fluid" src={chicken} />
               <div className="card-body d-flex flex-column justify-content-between">
@@ -55,6 +60,7 @@ function Home() {
                 <button className="btn btn-success">Reserve now</button>
               </div>
             </div>
+            <AosAnimation />
           </div>
          </div>
 
