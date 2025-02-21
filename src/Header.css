@@ -62,6 +62,30 @@
   background-color: #777777;
 }
 
-.grill-chill, .campgyup {
+/* */
+.grill-chill, .campgyup, .location, .menus {
   font-family: sans-serif;
+}
+
+/* */
+.menus {
+  background-image: url(./images/menus.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  height: 700px;
+}
+
+.menus::after {
+  content:"";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+
 }

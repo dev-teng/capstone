@@ -47,7 +47,7 @@ function About() {
       <div className="text-center p-3 bg-dark text-white fw-bold fs-4 mb-3">Location</div>
       <div className="row g-0 mb-3">
         <div className="col-md-6">
-          <h5 className="m-5 lh-base text-center pt-5">Here's the translation of the landmark instruction for non-Waze users:
+          <h5 className="m-5 lh-base text-center pt-5 location">Here's the translation of the landmark instruction for non-Waze users:
               Upon reaching the corner of Kubo sa Halamanan, go straight ahead to the 
               end, then turn right. You'll see it there and for Non waze or google map use this map.
               This is also the <a className="link-underline link-underline-opacity-0" href="https://www.waze.com/live-map/directions?to=ll.13.971584%2C121.163342">Waze link</a> and 
