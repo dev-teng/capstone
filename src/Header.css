@@ -61,3 +61,7 @@
 .navbar-toggler.collapsed .toggler-icon {
   background-color: #777777;
 }
+
+.grill-chill, .campgyup {
+  font-family: sans-serif;
+}

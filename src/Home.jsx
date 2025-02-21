@@ -2,6 +2,7 @@ import Allview from "./images/allview.jpg";
 import beef from "./images/beef.png";
 import pork from "./images/pork.png";
 import chicken from "./images/chicken.avif";
+import "./Header.css";
 function Home() {
   return (
     <div className="bg-secondary-subtle d-flex flex-column min-vh-100 m-0">
@@ -11,7 +12,7 @@ function Home() {
         </div>
         <div className="col-md-6 text-center">
           <h2 className="m-5">Camping + Samgyup</h2>
-          <h4 className="bg-light p-4 border border-dark m-5 lh-base">Grill, chill, and enjoy the thrill—camping meets samgyupsal for the perfect 
+          <h4 className="p-4 m-5 lh-base grill-chill">Grill, chill, and enjoy the thrill—camping meets samgyupsal for the perfect 
             bonding experience with family, friends, or loved ones.</h4>
           <h5 className="bg-dark p-5 rounded-circle m-5 lh-base text-white">For only 399 pesos per head, enjoy unlimited servings of beef, pork, 
             and chicken! A feast of tender, perfectly grilled meats just for you!</h5>

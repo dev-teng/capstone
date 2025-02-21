@@ -5,12 +5,13 @@ import locfour from "./images/locfour.jpg";
 import locfive from "./images/locfive.jpg";
 import locsix from "./images/locsix.jpg";
 import location from "./images/location.jpg";
+import "./Header.css";
 function About() {
   return (
     <div className="bg-secondary-subtle d-flex flex-column min-vh-100">
       <div className="row g-0 mt-5">
           <div className="col-md-4">
-            <h5 className="m-5 lh-base border border-dark p-3">"Campgyup" is a fun fusion of two things that people love: camping and samgyupsal a 
+            <h5 className="m-5 lh-base border border-dark p-3 campgyup">"Campgyup" is a fun fusion of two things that people love: camping and samgyupsal a 
                 Korean BBQ experience. It offers an exciting way to enjoy grilling meat in the great outdoors, 
                 combining the thrill of camping with the deliciousness of unlimited grilled meats like beef, pork,chicken and more.
                 The idea behind "Campgyup" is to bring friends and family together in a relaxing outdoor environment where you can enjoy tasty, 
