@@ -5,6 +5,7 @@ import locfour from "./images/locfour.jpg";
 import locfive from "./images/locfive.jpg";
 import locsix from "./images/locsix.jpg";
 import location from "./images/location.jpg";
+import dailyopen from "./images/dailyopen.jpg";
 import "./Header.css";
 function About() {
   return (
@@ -19,7 +20,7 @@ function About() {
             </h5>
           </div>
           <div className="col-md-2 d-flex align-items-end  g-2">
-            <img className="img-fluid" src={locone} />
+            <img className="img-fluid" src={dailyopen} />
           </div>
 
           <div className="col-md-2 d-flex align-items-end  g-2">
@@ -31,7 +32,11 @@ function About() {
           </div>
 
           <div className="row g-0 mb-5 mt-1">
-            <div className="col-md-2 offset-md-4 g-2">
+            <div className="col-md-2 offset-md-2 g-2">
+                <img className="img-fluid" src={locone} alt="Location 4" />
+            </div>
+
+            <div className="col-md-2 offset-md-0 g-2">
               <img className="img-fluid" src={locfour} alt="Location 4" />
             </div>
 
@@ -41,6 +46,7 @@ function About() {
             <div className="col-md-2 offset-md-0 g-2">
               <img className="img-fluid" src={locsix} alt="Location 4" />
             </div>
+            
           </div>
       </div>
 
@@ -57,6 +63,11 @@ function About() {
 
         <div className="col-md-6">
           <img className="img-fluid" src={location} />
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-md-12">
         </div>
       </div>
 
