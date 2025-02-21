@@ -26,7 +26,7 @@ function Home() {
               <img className="img-fluid" src={beefPlain} />
               <div className="card-body d-flex flex-column justify-content-between">
                 <div className="card-title fw-bold">Unlimited Beef</div>
-                <div className="card-text">thinly sliced beef with a tender texture and a burst of flavor</div>
+                <div className="card-text">Thinly sliced beef with a tender texture and a burst of flavor</div>
                 <hr/>
                 <button className="btn btn-success">Reserve now</button>
               </div>
