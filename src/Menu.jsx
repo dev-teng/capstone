@@ -8,7 +8,7 @@ import beefBulgogi from "./images/beefBulgogi.png";
 import chickenPlain from "./images/chickenPlain.webp";
 function Menu () {
   return (
-    <div className="bg-secondary-subtle d-flex flex-column min-vh-100 mt-5">
+    <div className="bg-success-subtle d-flex flex-column min-vh-100 mt-5">
           <div className="row g-0 menus">
             <div className="col-md-12 text-center d-flex flex-column justify-content-center">
               <h1 className="m-5 text-light d-1">UNLIMITED MENU</h1>
@@ -38,6 +38,7 @@ function Menu () {
                     </div>
                   </div>
                 </div>
+
                 <div className="col-6 col-md-3">
                   <div className="card h-100" >
                     <img className="img-fluid" src={porkSaltPepper} />
@@ -118,6 +119,12 @@ function Menu () {
                 </div>
               </div>
               
+          </div>
+
+          <div className="row mt-3 g-0">
+            <div className="col-md-12">
+              <h3 className="bg-dark text-light p-3 text-center">S I D E - D I S H E S</h3>
+            </div>
           </div>
     
     </div>

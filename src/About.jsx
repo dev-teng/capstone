@@ -9,7 +9,7 @@ import dailyopen from "./images/dailyopen.jpg";
 import "./Header.css";
 function About() {
   return (
-    <div className="bg-secondary-subtle d-flex flex-column min-vh-100">
+    <div className="bg-success-subtle d-flex flex-column min-vh-100">
       <div className="row g-0 mt-5">
           <div className="col-md-4">
             <h5 className="m-5 lh-base border border-dark p-3 campgyup">"Campgyup" is a fun fusion of two things that people love: camping and samgyupsal a 
