@@ -273,7 +273,7 @@ function Menu () {
                     <AosAnimation />
               </div>
         
-        <div className="row">
+        <div className="row g-0">
                 <div data-aos="fade-up" className="col-6 col-md-3">
                     <div className="card h-100" >
                           <img className="img-fluid" src={cucumberLemonade} />

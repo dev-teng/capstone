@@ -21,9 +21,12 @@ function Home() {
           <button className="btn btn-success btn-lg mt-3">Reserve Now</button>
           <AosAnimation />
         </div>
-        <div className="bg-dark p-2 mt-5 text-center text-light fw-bold fs-4">Main Dishes</div>
-         <div className="row mt-5 mb-5 g-0">
+        <div data-aos="fade-up" className="bg-dark p-2 mt-5 text-center text-light fw-bold fs-4">
+          M  A I N - D I S H E S
+          <AosAnimation />
+        </div>
 
+         <div className="row mt-5 mb-5 g-0">
           <div data-aos="fade-up" className="col-md-4">
             <div className="card h-100" >
               <img className="img-fluid" src={beefPlain} />

@@ -3,6 +3,8 @@ import Home from "./Home";
 import Navbar from "./Navbar";
 import About from "./About"
 import Menu from "./Menu";
+import Schedule from "./Schedule";
+import Promo from "./Promo";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 
@@ -15,6 +17,8 @@ function App() {
         <Route index element={<Home />}/>
         <Route path="about" element={<About />}/>
         <Route path="menu" element={<Menu />}/>
+        <Route path="promo" element={<Promo/>}/>
+        <Route path="schedule" element={<Schedule />}/>
       </Route>
     </Routes>
   </BrowserRouter>

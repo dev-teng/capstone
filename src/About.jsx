@@ -59,7 +59,7 @@ function About() {
           </div>
       </div>
 
-      <div className="text-center p-3 bg-dark text-white fw-bold fs-4 mb-3">Location</div>
+      <div className="text-center p-3 bg-dark text-white fw-bold fs-4 mb-3">L O C A T I O N</div>
       <div className="row g-0 mb-3">
         <div data-aos="fade-up" className="col-md-6">
           <h5 className="m-5 lh-base text-center pt-5 location">Here's the translation of the landmark instruction for non-Waze users:

@@ -63,7 +63,7 @@
 }
 
 /* */
-.grill-chill, .campgyup, .location, .menus {
+.grill-chill, .campgyup, .location, .menus, .reserved-Sched {
   font-family: sans-serif;
 }
 
@@ -88,4 +88,9 @@
     opacity: .7;
     z-index: -1;
 
+}
+
+.underline {
+  text-decoration: underline !important;
+  color: white !important;
 }

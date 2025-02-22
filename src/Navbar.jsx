@@ -1,15 +1,22 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import Logo from "./images/logo.jpg"
 import fbicon from "./images/fbicon.webp";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
 function Navbar () {
   let navigate = useNavigate()
+  let location = useLocation();
 
   const handleNavigation = (route) => {
     navigate(route)
     window.scrollTo(0, 0);
   }
+
+  const isActive = (path) => {
+    return location.pathname === path ? "underline" : "";
+  };
+
+
   return(
     <>
      <nav className="navbar navbar-expand-lg bg-dark fixed-top">
@@ -23,12 +30,19 @@ function Navbar () {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to="/about" onClick={handleNavigation} className="nav-link active fw-bold text-light fs-5" aria-current="page">About Us </Link>
+              <Link to="/about" onClick={handleNavigation} className={`nav-link active fw-bold text-light fs-5 ${isActive("/about")}`} aria-current="page">About Us </Link>
             </li>
             <li className="nav-item">
-              <Link to="/menu" onClick={handleNavigation} className="nav-link active fw-bold text-light fs-5" aria-current="page">Menu </Link>
+              <Link to="/menu" onClick={handleNavigation} className={`nav-link active fw-bold text-light fs-5 ${isActive("/menu")}`} aria-current="page">Menu </Link>
             </li>
-          
+
+            <li className="nav-item">
+              <Link to="/promo" onClick={handleNavigation} className={`nav-link active fw-bold text-light fs-5 ${isActive("/promo")}`} aria-current="page">Promo</Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/schedule" onClick={handleNavigation} className={`nav-link active fw-bold text-light fs-5 ${isActive("/schedule")}`} aria-current="page">Schedule </Link>
+            </li>
            
           </ul>
         </div>
