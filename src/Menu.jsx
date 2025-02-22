@@ -16,7 +16,8 @@ import lettuce from "./images/lettuce.png";
 import rice from "./images/rice.webp";
 import corn from "./images/corn.webp";
 import steamEgg from "./images/steamEgg.png";
-import cucumberLemonade from "./images/cucumberLemonade.png"
+import cucumberLemonade from "./images/cucumberLemonade.png";
+import fourSeason from "./images/fourSeason.webp";
 import AosAnimation from "./AosAnimtation";
 function Menu () {
   return (
@@ -258,7 +259,7 @@ function Menu () {
                           <img className="img-fluid" src={steamEgg} />
                           <div className="card-body d-flex flex-column justify-content-between">
                               <div className="card-title fw-bold">Korean Steam Egg</div>
-                              <div className="card-text">made by steaming eggs with a few basic ingredients, resulting in a smooth, custard-like texture</div>
+                              <div className="card-text">Made by steaming eggs with a few basic ingredients, resulting in a smooth, custard-like texture</div>
                           </div>
                     </div>
                     <AosAnimation />
@@ -271,6 +272,30 @@ function Menu () {
                     </div>
                     <AosAnimation />
               </div>
+        
+        <div className="row">
+                <div data-aos="fade-up" className="col-6 col-md-3">
+                    <div className="card h-100" >
+                          <img className="img-fluid" src={cucumberLemonade} />
+                          <div className="card-body d-flex flex-column justify-content-between">
+                              <div className="card-title fw-bold">Cucumber Lemonade</div>
+                              <div className="card-text">Refreshing and tangy drink that combines the crisp, cool flavor of cucumber with the zesty, tartness of lemonade.</div>
+                          </div>
+                    </div>
+                    <AosAnimation />
+                </div>
+
+                <div data-aos="fade-up" className="col-6 col-md-3">
+                    <div className="card h-100" >
+                          <img className="img-fluid" src={fourSeason} />
+                          <div className="card-body d-flex flex-column justify-content-between">
+                              <div className="card-title fw-bold">Four Season</div>
+                              <div className="card-text">Refreshing smooth, comforting, and warming tastes, making it the ultimate beverage.</div>
+                          </div>
+                    </div>
+                    <AosAnimation />
+                </div>
+        </div>
         
            
         
