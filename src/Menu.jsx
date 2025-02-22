@@ -16,6 +16,7 @@ import lettuce from "./images/lettuce.png";
 import rice from "./images/rice.webp";
 import corn from "./images/corn.webp";
 import steamEgg from "./images/steamEgg.png";
+import cucumberLemonade from "./images/cucumberLemonade.png"
 import AosAnimation from "./AosAnimtation";
 function Menu () {
   return (
@@ -142,13 +143,14 @@ function Menu () {
               
           </div>
 
-          <div className="row mt-3 g-0">
+          <div data-aos="fade-up" className="row mt-3 g-0">
             <div className="col-md-12">
               <h3 className="bg-dark text-light p-3 text-center">S I D E - D I S H E S</h3>
             </div>
+            <AosAnimation />
           </div>
 
-          <div className="row g-0">
+        <div className="row g-0">
                 <div data-aos="fade-up" className="col-6 col-md-3">
                       <div className="card h-100" >
                             <img className="img-fluid" src={porkSisig} />
@@ -261,8 +263,14 @@ function Menu () {
                     </div>
                     <AosAnimation />
                 </div>
-          </div>
+        </div>
 
+              <div data-aos="fade-up" className="row mt-3 g-0">
+                    <div className="col-md-12">
+                      <h3 className="bg-dark text-light p-3 text-center">D R I N K S</h3>
+                    </div>
+                    <AosAnimation />
+              </div>
         
            
         
