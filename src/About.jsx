@@ -1,11 +1,3 @@
-import locone from "./images/locone.jpg";
-import loctwo from "./images/loctwo.jpg";
-import locthree from "./images/locthree.jpg";
-import locfour from "./images/locfour.jpg";
-import locfive from "./images/locfive.jpg";
-import locsix from "./images/locsix.jpg";
-import location from "./images/location.jpg";
-import dailyopen from "./images/dailyopen.jpg";
 import AosAnimation from "./AosAnimtation";
 import "./Header.css";
 function About() {
@@ -22,37 +14,37 @@ function About() {
             </h5>
           </div>
           <div data-aos="fade-up" className="col-md-2 d-flex align-items-end  g-2">
-            <img className="img-fluid" src={dailyopen} />
+            <img className="img-fluid" src="/images/dailyopen.jpg" />
             <AosAnimation />
           </div>
 
           <div data-aos="fade-up" className="col-md-2 d-flex align-items-end  g-2">
-            <img className="img-fluid" src={loctwo} />
+            <img className="img-fluid" src="/images/loctwo.jpg" />
             <AosAnimation />
           </div>
 
           <div data-aos="fade-up" className="col-md-2 d-flex align-items-end  g-2">
-            <img className="img-fluid" src={locthree} />
+            <img className="img-fluid" src="/images/locthree.jpg" />
             <AosAnimation />
           </div>
 
           <div className="row g-0 mb-5 mt-1">
             <div data-aos="fade-up" className="col-md-2 offset-md-2 g-2">
-                <img className="img-fluid" src={locone} alt="Location 4" />
+                <img className="img-fluid" src="/images/locone.jpg" />
                 <AosAnimation />
             </div>
 
             <div data-aos="fade-up" className="col-md-2 offset-md-0 g-2">
-              <img className="img-fluid" src={locfour} alt="Location 4" />
+              <img className="img-fluid" src="/images/locfour.jpg" />
               <AosAnimation />
             </div>
 
             <div data-aos="fade-up" className="col-md-2 offset-md-0 g-2">
-              <img className="img-fluid" src={locfive} alt="Location 4" />
+              <img className="img-fluid" src="/images/locfive.jpg" />
               <AosAnimation />
             </div>
             <div data-aos="fade-up" className="col-md-2 offset-md-0 g-2">
-              <img className="img-fluid" src={locsix} alt="Location 4" />
+              <img className="img-fluid" src="/images/locsix.jpg" />
               <AosAnimation />
             </div>
              
@@ -72,7 +64,7 @@ function About() {
         </div>
 
         <div data-aos="fade-up" className="col-md-6">
-          <img className="img-fluid" src={location} />
+          <img className="img-fluid" src="/images/location.jpg" />
         </div>
         <AosAnimation />
       </div>

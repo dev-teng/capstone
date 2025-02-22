@@ -1,7 +1,3 @@
-import Allview from "./images/allview.jpg";
-import beefPlain from "./images/beefPlain.webp";
-import pork from "./images/pork.png";
-import chicken from "./images/chicken.avif";
 import "./Header.css";
 import AosAnimation from "./AosAnimtation";
 function Home() {
@@ -9,7 +5,7 @@ function Home() {
     <div className="bg-success-subtle d-flex flex-column min-vh-100 m-0">
       <div className="row g-0 mt-5">
         <div data-aos="fade-up" className="col-md-6">
-          <img className="img-fluid w-100 rounded" src={Allview} />
+          <img className="img-fluid w-100 rounded" src="/images/allview.jpg" />
           <AosAnimation />
         </div>
         <div data-aos="fade-up" className="col-md-6 text-center">
@@ -29,7 +25,7 @@ function Home() {
          <div className="row mt-5 mb-5 g-0">
           <div data-aos="fade-up" className="col-md-4">
             <div className="card h-100" >
-              <img className="img-fluid" src={beefPlain} />
+              <img className="img-fluid" src="/images/beefPlain.webp" />
               <div className="card-body d-flex flex-column justify-content-between">
                 <div className="card-title fw-bold">Unlimited Beef</div>
                 <div className="card-text">Thinly sliced beef with a tender texture and a burst of flavor</div>
@@ -42,7 +38,7 @@ function Home() {
 
           <div data-aos="fade-up" className="col-md-4" >
             <div className="card h-100" >
-              <img className="img-fluid" src={pork} />
+              <img className="img-fluid" src="/images/pork.png" />
               <div className="card-body d-flex flex-column justify-content-between">
                 <div className="card-title fw-bold">Unlimited Pork</div>
                 <div className="card-text">Savor endless servings of delicious, tender pork grilled to perfection.</div>
@@ -55,7 +51,7 @@ function Home() {
 
           <div data-aos="fade-up" className="col-md-4">
             <div className="card h-100" >
-              <img className="img-fluid" src={chicken} />
+              <img className="img-fluid" src="/images/chicken.avif" />
               <div className="card-body d-flex flex-column justify-content-between">
                 <div className="card-title fw-bold">Unlimited Chicken</div>
                 <div className="card-text">Enjoy endless servings of juicy, perfectly grilled chicken for a mouthwatering feast."</div>

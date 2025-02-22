@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Pork Sisig",
+    "description": "This dish made from crispy and tender pieces of pork, perfectly seasoned with a savory blend of spices, onions, and chilies.",
+    "image": "/images/porkSisig.png"
+  },
+  {
+    "id": 2,
+    "name": "Fish Cake",
+    "description": "This dish combines the delicate flavors of fish with a smoky, grilled finish.",
+    "image": "/images/fishCake.png"
+  },
+  {
+    "id": 3,
+    "name": "Enoki Mushroom",
+    "description": "Nutty flavor and tender texture",
+    "image": "/images/enoki.png"
+  },
+  {
+    "id": 4,
+    "name": "Kimchi",
+    "description": "Side dish that's the perfect balance of spicy, tangy, and umami.",
+    "image": "/images/kimchi.png"
+  },
+  {
+    "id": 5,
+    "name": "Hotdog",
+    "description": "Crispy on the outside while still juicy inside and grilling a hot dog alongside pork belly slices on a hot grill.",
+    "image": "/images/hotdog.png"
+  },
+  {
+    "id": 6,
+    "name": "Cucumber",
+    "description": "Salted briefly to remove excess moisture, giving the dish a crisp and crunchy texture that complements heavier main dishes like grilled meats or stews",
+    "image": "/images/cucumber.png"
+  },
+  {
+    "id": 7,
+    "name": "Lettuce",
+    "description": "The cool, crisp leaves are perfect for wrapping pork belly slices",
+    "image": "/images/lettuce.png"
+  },
+  {
+    "id": 8,
+    "name": "Rice",
+    "description": "This is a soft, fluffy grain. It's often served with a variety of dishes like curries, stews, or grilled meats.",
+    "image": "/images/rice.webp"
+  },
+  {
+    "id": 9,
+    "name": "Corn",
+    "description": "Sweet and tender kernels, perfect as a side dish to accompany grilled meats and other dishes.",
+    "image": "/images/corn.webp"
+  },
+  {
+    "id": 10,
+    "name": "Korean Steam Egg",
+    "description": "Made by steaming eggs with a few basic ingredients, resulting in a smooth, custard-like texture.",
+    "image": "/images/steamEgg.png"
+  }
+]
