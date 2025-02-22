@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Pork Plain",
+    "description": "Savor endless servings of delicious, tender pork grilled to perfection.",
+    "image": "./images/pork.png"
+  },
+  {
+    "id": 2,
+    "name": "Pork Salt and Pepper",
+    "description": "Slices of pork belly, marinated with a blend of salt, soy sauce, and sesame oil.",
+    "image": "./images/porkSaltPepper.png"
+  },
+  {
+    "id": 3,
+    "name": "Pork Garlic and Pepper",
+    "description": "Slices of pork belly, marinated with a special blend of garlic, soy sauce.",
+    "image": "./images/porkSaltPepper.png"
+  },
+  {
+    "id": 4,
+    "name": "Pork Bulgogi",
+    "description": "Thinly sliced pork belly with the rich flavors of bulgogi marinade.",
+    "image": "./images/porkBulgogi.png"
+  },
+  {
+    "id": 5,
+    "name": "Beef Plain",
+    "description": "Thinly sliced beef with a tender texture and a burst of flavor.",
+    "image": "./images/beefPlain.webp"
+  },
+  {
+    "id": 6,
+    "name": "Beef Salt and Pepper",
+    "description": "Thinly sliced beef marinated with a blend of salt, soy sauce, and sesame oil.",
+    "image": "./images/beef.png"
+  },
+  {
+    "id": 7,
+    "name": "Beef Garlic and Pepper",
+    "description": "Thinly sliced beef marinated with a special blend of garlic, soy sauce.",
+    "image": "./images/beef.png"
+  },
+  {
+    "id": 8,
+    "name": "Beef Bulgogi",
+    "description": "Thinly sliced beef marinated with a special blend of garlic, soy sauce.",
+    "image": "./images/beefBulgogi.png"
+  },
+  {
+    "id": 9,
+    "name": "Chicken Plain",
+    "description": "Tender and juicy pieces of chicken, grilled to perfection for a light and savory flavor.",
+    "image": "./images/chickenPlain.webp"
+  }
+]
