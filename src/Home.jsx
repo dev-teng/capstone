@@ -1,6 +1,18 @@
 import "./Header.css";
 import AosAnimation from "./AosAnimtation";
+import { useState } from "react";
+import "./Header.css";
 function Home() {
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  const handleReserveClick = () => {
+    setIsPopupVisible(true)
+  }
+
+  const handleClosePopup = () => {
+    setIsPopupVisible(false)
+  }
+
   return (
     <div className="bg-success-subtle d-flex flex-column min-vh-100 m-0">
       <div className="row g-0 mt-5">
@@ -14,9 +26,39 @@ function Home() {
             bonding experience with family, friends, or loved ones.</h4>
           <h5 className="bg-dark p-5 rounded-circle m-2 lh-base text-white">For only 399 pesos per head, enjoy unlimited servings of beef, pork, 
             and chicken! A feast of tender, perfectly grilled meats just for you!</h5>
-          <button className="btn btn-success btn-lg mt-3">Reserve Now</button>
+          <button  onClick={handleReserveClick} className="btn btn-success btn-lg mt-3">Reserve Now</button>
           <AosAnimation />
         </div>
+
+        {isPopupVisible && (
+        <div className="popup-overlay">
+          <div className="popup-form">
+            <h3>Reservation Form</h3>
+            <form>
+              <label>Name:</label>
+              <input type="text" placeholder="Your Name" required />
+              <label>Pax:</label>
+              <input
+                type="number"
+                placeholder="Number of People"
+                required
+                min="1"
+              />
+              <label>Email:</label>
+              <input type="email" placeholder="Your Email" required />
+              <label>Date:</label>
+              <input type="date" required />
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            </form>
+            <button className="btn btn-danger mt-3" onClick={handleClosePopup}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
         <div data-aos="fade-up" className="bg-dark p-2 mt-5 text-center text-light fw-bold fs-4">
           M  A I N - D I S H E S
           <AosAnimation />
@@ -35,6 +77,7 @@ function Home() {
             </div>
             <AosAnimation />
           </div>
+
 
           <div data-aos="fade-up" className="col-md-4" >
             <div className="card h-100" >
