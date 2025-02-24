@@ -12,6 +12,7 @@ function Schedule() {
   
   const [reservationList, setReservationList] = useState([]);
 
+  // Add reservation function
   const addReservation = () => {
     if (reservation.name === '' || reservation.pax === '' || reservation.email === '' || 
         reservation.contact === '' || reservation.date === '') {
@@ -42,9 +43,11 @@ function Schedule() {
     }
   };
 
-  const handleDelete = () => {
-    
-  }
+  // Delete reservation function
+  const handleDelete = (id) => {
+    const updatedList = reservationList.filter((reservation) => reservation.id !== id);
+    setReservationList(updatedList);
+  };
 
   return (
     <div className="container-fluid p-5 mt-5">
@@ -123,6 +126,7 @@ function Schedule() {
             <th>Email</th>
             <th>Contact</th>
             <th>Date</th>
+            <th>Actions</th> {/* Added an actions column for delete */}
           </tr>
         </thead>
         <tbody>
@@ -134,11 +138,20 @@ function Schedule() {
                 <td>{reservationRecord.email}</td>
                 <td>{reservationRecord.contact}</td>
                 <td>{reservationRecord.date}</td>
+                <td>
+                  {/* Delete button */}
+                  <button 
+                    onClick={() => handleDelete(reservationRecord.id)} 
+                    className="btn btn-danger"
+                  >
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan="5" className="text-center">No Reservations</td>
+              <td colSpan="6" className="text-center">No Reservations</td>
             </tr>
           )}
         </tbody>
