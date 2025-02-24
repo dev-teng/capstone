@@ -1,23 +1,13 @@
-import "./Header.css";
 import AosAnimation from "./AosAnimtation";
 import { useState } from "react";
 import "./Header.css";
+import { useNavigate } from "react-router-dom";
+import Schedule from "./Schedule"
+
 function Home() {
-  const [info, setInfo] =useState({
-    name: '',
-    pax: '',
-    email: '',
-    contact: '',
-    date: '',
-  });
-  const [isPopupVisible, setIsPopupVisible] = useState(false);
-
+  let navigate = useNavigate();
   const handleReserveClick = () => {
-    setIsPopupVisible(true)
-  }
-
-  const handleClosePopup = () => {
-    setIsPopupVisible(false)
+    navigate("/schedule")
   }
 
   return (
@@ -36,37 +26,6 @@ function Home() {
           <button  onClick={handleReserveClick} className="btn btn-success btn-lg mt-3">Reserve Now</button>
           <AosAnimation />
         </div>
-
-        {isPopupVisible && (
-        <div className="popup-overlay mt-4">
-          <div className="popup-form">
-            <h3>Reservation Form</h3>
-            <form>
-              <label htmlFor="name">Name:</label>
-              <input id="name" type="text" placeholder="Your Name" required />
-              <label htmlFor="number">Pax:</label>
-              <input id="number"
-                type="number"
-                placeholder="Number of People"
-                required
-                min="1"
-              />
-              <label htmlFor="email">Email:</label>
-              <input id="email" type="email" placeholder="Your Email" required />
-              <label htmlFor="contact">Contact Number:</label>
-              <input id="contact" type="number" placeholder="Your number" required />
-              <label htmlFor="date">Date:</label>
-              <input id="date" type="date" required />
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
-            </form>
-            <button className="btn btn-danger mt-3" onClick={handleClosePopup}>
-              Close
-            </button>
-          </div>
-        </div>
-      )}
 
         <div data-aos="fade-up" className="bg-dark p-2 mt-5 text-center text-light fw-bold fs-4">
           M  A I N - D I S H E S
@@ -114,8 +73,8 @@ function Home() {
             <AosAnimation />
           </div>
          </div>
-
       </div>
+
     </div>
 
   )
