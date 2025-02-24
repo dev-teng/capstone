@@ -3,6 +3,13 @@ import AosAnimation from "./AosAnimtation";
 import { useState } from "react";
 import "./Header.css";
 function Home() {
+  const [info, setInfo] =useState({
+    name: '',
+    pax: '',
+    email: '',
+    contact: '',
+    date: '',
+  });
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   const handleReserveClick = () => {
@@ -31,23 +38,25 @@ function Home() {
         </div>
 
         {isPopupVisible && (
-        <div className="popup-overlay">
+        <div className="popup-overlay mt-4">
           <div className="popup-form">
             <h3>Reservation Form</h3>
             <form>
-              <label>Name:</label>
-              <input type="text" placeholder="Your Name" required />
-              <label>Pax:</label>
-              <input
+              <label htmlFor="name">Name:</label>
+              <input id="name" type="text" placeholder="Your Name" required />
+              <label htmlFor="number">Pax:</label>
+              <input id="number"
                 type="number"
                 placeholder="Number of People"
                 required
                 min="1"
               />
-              <label>Email:</label>
-              <input type="email" placeholder="Your Email" required />
-              <label>Date:</label>
-              <input type="date" required />
+              <label htmlFor="email">Email:</label>
+              <input id="email" type="email" placeholder="Your Email" required />
+              <label htmlFor="contact">Contact Number:</label>
+              <input id="contact" type="number" placeholder="Your number" required />
+              <label htmlFor="date">Date:</label>
+              <input id="date" type="date" required />
               <button type="submit" className="btn btn-primary">
                 Submit
               </button>
@@ -72,7 +81,7 @@ function Home() {
                 <div className="card-title fw-bold">Unlimited Beef</div>
                 <div className="card-text">Thinly sliced beef with a tender texture and a burst of flavor</div>
                 <hr/>
-                <button className="btn btn-success">Reserve now</button>
+                <button onClick={handleReserveClick} className="btn btn-success">Reserve now</button>
               </div>
             </div>
             <AosAnimation />
@@ -86,7 +95,7 @@ function Home() {
                 <div className="card-title fw-bold">Unlimited Pork</div>
                 <div className="card-text">Savor endless servings of delicious, tender pork grilled to perfection.</div>
                 <hr/>
-                <button className="btn btn-success">Reserve now</button>
+                <button onClick={handleReserveClick} className="btn btn-success">Reserve now</button>
               </div>
             </div>
             <AosAnimation />
@@ -99,7 +108,7 @@ function Home() {
                 <div className="card-title fw-bold">Unlimited Chicken</div>
                 <div className="card-text">Enjoy endless servings of juicy, perfectly grilled chicken for a mouthwatering feast."</div>
                 <hr/>
-                <button className="btn btn-success">Reserve now</button>
+                <button onClick={handleReserveClick} className="btn btn-success">Reserve now</button>
               </div>
             </div>
             <AosAnimation />
