@@ -2,7 +2,7 @@ import {Link, useNavigate } from "react-router-dom";
 import firebaseApp from "./firebaseConfig";
 import {getAuth, createUserWithEmailAndPassword, updateProfile} from "firebase/auth";
 import { useState } from "react";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 function Register () {
   const [displayName, setDisplayName] = useState('');
   const [email, setEmail] = useState('');
@@ -24,7 +24,7 @@ function Register () {
           const user = userCredential.user;
           updateProfile(auth.currentUser, {
             displayName: displayName
-          })
+          });
 
           Swal.fire({
             title: "Registration!",
@@ -35,8 +35,7 @@ function Register () {
 
           navigate("/schedule");
 
-        }
-      )  
+        });  
     }else {
       Swal.fire({
         title: "Error!",
@@ -44,8 +43,8 @@ function Register () {
         icon: "error",
         confirmButtonColor: "#dc3545"
       });
-    }
-  }
+    };
+  };
 
   return (
   <div className="container-fluid p-5" style={{width: "50rem"}}>
