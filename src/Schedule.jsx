@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import firebaseApp from "./firebaseConfig";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
+import Swal from 'sweetalert2';
 
 function Schedule() {
   const [reservation, setReservation] = useState({
@@ -14,6 +15,7 @@ function Schedule() {
   });
   
   const [reservationList, setReservationList] = useState([]);
+  const [userProfile, setUserProfile] = useState('');
 
   // Add reservation function
   const addReservation = () => {
@@ -58,23 +60,47 @@ function Schedule() {
     const auth = getAuth(firebaseApp);
     onAuthStateChanged(auth, (user) => {
       if (user){
-
+        setUserProfile({
+          email: user.email,
+          displayName: user.displayName
+        })
+        //in session
       }else {
-        navigate("/")
+        navigate("/") //without session
       }
     });
+  }, []);
 
-
-  }, [])
+  const logout = () => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You will be logged out!",
+      icon: 'warning',
+      confirmButtonColor: "#dc3545",
+      showCancelButton: true,
+      confirmButtonText: 'Yes, log me out',
+      cancelButtonText: 'Cancel'
+    }).then((result) => {
+      if(result.isConfirmed){
+        const auth = getAuth();
+        signOut(auth).then(()=> {
+          navigate("/");
+        });
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        //Swal.fire('Logout Cancelled');
+      }
+    });
+   
+  };
 
   return (
     <div className="container-fluid p-5 mt-5">
       <h1 className="text-center mb-5">Campgyup Reservation</h1>
 
-      <div className="border border-circle d-grid p-2 text-center mb-5" style={{width: "8rem"}}>
-        <span className="fw-bold">Vincent Teng</span> 
-        <span className="mb-2">teng@test.com</span> 
-        <button className="btn btn-dark btn-sm">Logout</button>
+      <div className="border border-circle d-grid p-2 text-center mb-5" style={{width: "12rem"}}>
+        <span className="fw-bold">{userProfile.displayName}</span> 
+        <span className="mb-2">{userProfile.email}</span> 
+        <button onClick={logout} className="btn btn-dark btn-sm">Logout</button>
       </div>
 
       <div className="row">

@@ -39,7 +39,7 @@ function Home() {
                 <div className="card-title fw-bold">Unlimited Beef</div>
                 <div className="card-text">Thinly sliced beef with a tender texture and a burst of flavor</div>
                 <hr/>
-                <Link><button className="btn btn-success">Reserve now</button></Link> 
+                <Link to="/login"><button className="btn btn-success">Reserve now</button></Link> 
               </div>
             </div>
             <AosAnimation />
@@ -53,7 +53,7 @@ function Home() {
                 <div className="card-title fw-bold">Unlimited Pork</div>
                 <div className="card-text">Savor endless servings of delicious, tender pork grilled to perfection.</div>
                 <hr/>
-                <Link><button className="btn btn-success">Reserve now</button></Link>
+                <Link to="/login"><button className="btn btn-success">Reserve now</button></Link>
               </div>
             </div>
             <AosAnimation />
@@ -66,7 +66,7 @@ function Home() {
                 <div className="card-title fw-bold">Unlimited Chicken</div>
                 <div className="card-text">Enjoy endless servings of juicy, perfectly grilled chicken for a mouthwatering feast."</div>
                 <hr/>
-                <Link><button className="btn btn-success">Reserve now</button></Link>
+                <Link to="/login"><button className="btn btn-success">Reserve now</button></Link>
               </div>
             </div>
             <AosAnimation />
