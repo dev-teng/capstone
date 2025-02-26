@@ -44,6 +44,14 @@ function Navbar () {
             <li className="nav-item">
               <Link to="/schedule" onClick={handleNavigation} className={`nav-link active fw-bold text-light fs-5 ${isActive("/schedule")}`} aria-current="page">Schedule </Link>
             </li>
+
+            <li className="nav-item">
+              <Link to="/login" onClick={handleNavigation} className={`nav-link active fw-bold text-light fs-5 ${isActive("/login")}`} aria-current="page">Login </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/register" onClick={handleNavigation} className={`nav-link active fw-bold text-light fs-5 ${isActive("/register")}`} aria-current="page">Register </Link>
+            </li>
            
           </ul>
         </div>
