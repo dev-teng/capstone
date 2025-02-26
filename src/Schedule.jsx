@@ -52,6 +52,11 @@ function Schedule() {
   return (
     <div className="container-fluid p-5 mt-5">
       <h1 className="text-center mb-5">Campgyup Reservation</h1>
+      <div className="border border-circle d-grid p-2 text-center mb-5" style={{width: "8rem"}}>
+        <span className="fw-bold">Vincent Teng</span> 
+        <span className="mb-2">teng@test.com</span> 
+        <button className="btn btn-dark btn-sm">Logout</button>
+      </div>
 
       {/* Form to add a new reservation */}
       <div className="row">
@@ -107,15 +112,11 @@ function Schedule() {
           />
         </div>
       </div>
-
-      {/* Button to add the reservation */}
       <div className="mt-3">
         <button onClick={addReservation} className="btn btn-dark">+ Add Reservation</button>
       </div>
 
       <hr />
-
-      {/* Render the reservation list immediately */}
       <h3 className="mt-5">Reservations List</h3>
 
       <table className="table table-bordered mt-3">
@@ -126,7 +127,7 @@ function Schedule() {
             <th>Email</th>
             <th>Contact</th>
             <th>Date</th>
-            <th>Actions</th> {/* Added an actions column for delete */}
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -138,14 +139,7 @@ function Schedule() {
                 <td>{reservationRecord.email}</td>
                 <td>{reservationRecord.contact}</td>
                 <td>{reservationRecord.date}</td>
-                <td>
-                  {/* Delete button */}
-                  <button 
-                    onClick={() => handleDelete(reservationRecord.id)} 
-                    className="btn btn-danger"
-                  >
-                    Delete
-                  </button>
+                <td><button onClick={() => handleDelete(reservationRecord.id)} className="btn btn-danger"> Delete</button>
                 </td>
               </tr>
             ))
