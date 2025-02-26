@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import firebaseApp from "./firebaseConfig";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 import "./Header.css";
 
 function Schedule() {
@@ -49,16 +52,31 @@ function Schedule() {
     setReservationList(updatedList);
   };
 
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    const auth = getAuth(firebaseApp);
+    onAuthStateChanged(auth, (user) => {
+      if (user){
+
+      }else {
+        navigate("/")
+      }
+    });
+
+
+  }, [])
+
   return (
     <div className="container-fluid p-5 mt-5">
       <h1 className="text-center mb-5">Campgyup Reservation</h1>
+
       <div className="border border-circle d-grid p-2 text-center mb-5" style={{width: "8rem"}}>
         <span className="fw-bold">Vincent Teng</span> 
         <span className="mb-2">teng@test.com</span> 
         <button className="btn btn-dark btn-sm">Logout</button>
       </div>
 
-      {/* Form to add a new reservation */}
       <div className="row">
         <div className="col-md-6">
           <label>Name</label>

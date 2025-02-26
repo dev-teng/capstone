@@ -3,12 +3,10 @@ import { useState } from "react";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
 import Schedule from "./Schedule"
+import { Link } from "react-router-dom";
 
 function Home() {
   let navigate = useNavigate();
-  const handleReserveClick = () => {
-    navigate("/schedule")
-  }
 
   return (
     <div className="bg-success-subtle d-flex flex-column min-vh-100 m-0">
@@ -23,7 +21,8 @@ function Home() {
             bonding experience with family, friends, or loved ones.</h4>
           <h5 className="bg-dark p-5 rounded-circle m-2 lh-base text-white">For only 399 pesos per head, enjoy unlimited servings of beef, pork, 
             and chicken! A feast of tender, perfectly grilled meats just for you!</h5>
-          <button  onClick={handleReserveClick} className="btn btn-success btn-lg mt-3">Reserve Now</button>
+            <Link to="/login"><button className="btn btn-success btn-lg mt-3">Reserve Now</button></Link>
+          
           <AosAnimation />
         </div>
 
@@ -40,7 +39,7 @@ function Home() {
                 <div className="card-title fw-bold">Unlimited Beef</div>
                 <div className="card-text">Thinly sliced beef with a tender texture and a burst of flavor</div>
                 <hr/>
-                <button onClick={handleReserveClick} className="btn btn-success">Reserve now</button>
+                <Link><button className="btn btn-success">Reserve now</button></Link> 
               </div>
             </div>
             <AosAnimation />
@@ -54,7 +53,7 @@ function Home() {
                 <div className="card-title fw-bold">Unlimited Pork</div>
                 <div className="card-text">Savor endless servings of delicious, tender pork grilled to perfection.</div>
                 <hr/>
-                <button onClick={handleReserveClick} className="btn btn-success">Reserve now</button>
+                <Link><button className="btn btn-success">Reserve now</button></Link>
               </div>
             </div>
             <AosAnimation />
@@ -67,7 +66,7 @@ function Home() {
                 <div className="card-title fw-bold">Unlimited Chicken</div>
                 <div className="card-text">Enjoy endless servings of juicy, perfectly grilled chicken for a mouthwatering feast."</div>
                 <hr/>
-                <button onClick={handleReserveClick} className="btn btn-success">Reserve now</button>
+                <Link><button className="btn btn-success">Reserve now</button></Link>
               </div>
             </div>
             <AosAnimation />

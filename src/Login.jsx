@@ -1,9 +1,20 @@
 import {Link, useNavigate } from "react-router-dom";
 import firebaseApp from "./firebaseConfig";
-import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
-import { useState } from "react";
+import {getAuth, signInWithEmailAndPassword, onAuthStateChanged} from "firebase/auth";
+import { useState, useEffect } from "react";
 import Swal from 'sweetalert2';
 function Login () {
+
+  useEffect(() => {
+    const auth = getAuth(firebaseApp)
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        navigate("/schedule");
+      }
+    });
+  }, []);
+
+
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
