@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import firebaseApp from "./firebaseConfig";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { getFirestore, addDoc, collection, onSnapshot, deleteDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import Swal from 'sweetalert2';
@@ -16,6 +17,7 @@ function Schedule() {
   
   const [reservationList, setReservationList] = useState([]);
   const [userProfile, setUserProfile] = useState('');
+  const db = getFirestore(firebaseApp)
 
   // Add reservation function
   const addReservation = () => {
@@ -24,27 +26,26 @@ function Schedule() {
       alert('Missing fields ❌');
     } else {
       const nextId = reservationList.length > 0 ? Math.max(...reservationList.map(res => res.id)) + 1 : 1;
-
       const newReservation = {
         id: nextId,
         name: reservation.name,
         pax: reservation.pax,
         email: reservation.email,
         contact: reservation.contact,
-        date: reservation.date,
+        date: reservation.date
       };
-
-      // Add new reservation to the list
-      setReservationList([...reservationList, newReservation]);
-
-      // Reset the input fields
-      setReservation({
-        name: '',
-        pax: '',
-        email: '',
-        contact: '',
-        date: '',
-      });
+      addDoc(collection(db, "cosInfos"), newReservation).then(()=> {
+        // Add new reservation to the list
+        setReservationList([...reservationList, newReservation]);
+        // Reset the input fields
+        setReservation({
+          name: '',
+          pax: '',
+          email: '',
+          contact: '',
+          date: '',
+        });
+      }); 
     }
   };
 
@@ -57,18 +58,33 @@ function Schedule() {
   let navigate = useNavigate();
 
   useEffect(() => {
+    //authentication
     const auth = getAuth(firebaseApp);
     onAuthStateChanged(auth, (user) => {
       if (user){
         setUserProfile({
           email: user.email,
           displayName: user.displayName
+          //in session
         })
-        //in session
+        
       }else {
         navigate("/") //without session
       }
     });
+
+
+    //rendered db list
+    onSnapshot(collection(db, "cosInfos"), snapshot => {
+      const newReservationList =[]
+      snapshot.forEach((reservationDoc)=> {
+        const reservationData = reservationDoc.data()
+        newReservationList.push({...reservationData, id: reservationDoc.id})
+      });
+      setReservationList(newReservationList);
+    });
+
+
   }, []);
 
   const logout = () => {
