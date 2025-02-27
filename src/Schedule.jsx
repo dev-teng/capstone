@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import firebaseApp from "./firebaseConfig";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
-import { getFirestore, addDoc, collection, onSnapshot, deleteDoc } from "firebase/firestore";
+import { getFirestore, addDoc, collection, onSnapshot, deleteDoc, doc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import Swal from 'sweetalert2';
@@ -51,8 +51,11 @@ function Schedule() {
 
   // Delete reservation function
   const handleDelete = (id) => {
-    const updatedList = reservationList.filter((reservation) => reservation.id !== id);
-    setReservationList(updatedList);
+     const docRef = doc(db, "cosInfos", id)
+     deleteDoc(docRef).then(() => {
+     setReservationList((prevList) => prevList.filter((reservation)=>reservation.id !== id))
+    });
+           
   };
 
   let navigate = useNavigate();
