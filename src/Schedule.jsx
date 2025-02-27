@@ -51,12 +51,37 @@ function Schedule() {
 
   // Delete reservation function
   const handleDelete = (id) => {
-     const docRef = doc(db, "cosInfos", id)
-     deleteDoc(docRef).then(() => {
-     setReservationList((prevList) => prevList.filter((reservation)=>reservation.id !== id))
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "This action cannot be undone!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#343a40',
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'Cancel',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const docRef = doc(db, "cosInfos", id);
+        deleteDoc(docRef).then(() => {
+          // After successful deletion, update the state to remove the item from the list
+          setReservationList((prevList) => prevList.filter((reservation) => reservation.id !== id));
+          Swal.fire(
+            'Deleted!',
+            'The reservation has been deleted.',
+            'success'
+          );
+        }).catch((error) => {
+          Swal.fire(
+            'Error!',
+            'There was an error deleting the reservation.',
+            'error'
+          );
+        });
+      }
     });
-           
   };
+  
 
   let navigate = useNavigate();
 
