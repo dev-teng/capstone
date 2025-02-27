@@ -18,6 +18,7 @@ function Schedule() {
   const [reservationList, setReservationList] = useState([]);
   const [userProfile, setUserProfile] = useState('');
   const db = getFirestore(firebaseApp)
+  const [buttonLoading, setButtonLoading] = useState(false);
 
   // Add reservation function
   const addReservation = () => {
@@ -25,6 +26,7 @@ function Schedule() {
         reservation.contact === '' || reservation.date === '') {
       alert('Missing fields ❌');
     } else {
+      setButtonLoading(true)
       const nextId = reservationList.length > 0 ? Math.max(...reservationList.map(res => res.id)) + 1 : 1;
       const newReservation = {
         id: nextId,
@@ -45,6 +47,7 @@ function Schedule() {
           contact: '',
           date: '',
         });
+        setButtonLoading(false)
       }); 
     }
   };
@@ -201,7 +204,17 @@ function Schedule() {
         </div>
       </div>
       <div className="mt-3">
-        <button onClick={addReservation} className="btn btn-dark">+ Add Reservation</button>
+        <button onClick={addReservation} className="btn btn-dark" disabled={buttonLoading}>
+          {buttonLoading ?
+          (
+            <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          )
+          :
+          (
+            "+ Add Reservation"
+          )
+          }
+        </button>
       </div>
 
       <hr />
