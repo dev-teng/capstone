@@ -56,8 +56,8 @@ function Login () {
 
   return(
     <div className="d-flex flex-column min-vh-100">
-      <div className="container-fluid p-5" style={{width: "50rem", width: "100%"}}>
-      <div className="border p-5 m-5 rounded">
+      <div className="container-fluid mt-5" style={{width: "50rem", width: "100%"}}>
+      <div className="border p-5 mt-5 mb-5 rounded">
         <h1 className="text-center">Welcome to Campgyup</h1>
         <p className="text-center">Unli meats is just a click away 🤤.</p>
         <h4 className="text-secondary">Login to your account</h4>

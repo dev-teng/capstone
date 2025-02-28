@@ -58,8 +58,9 @@ useEffect(() => {
   };
 
   return (
-  <div className="container-fluid p-5" style={{width: "50rem", width: "100%"}}>
-      <div className="border p-5 m-5 rounded">
+  <div className="d-flex flex-column min-vh-100">
+      <div className="container-fluid mt-5" style={{width: "50rem", width: "100%"}}>
+      <div className="border p-5 mt-5 rounded">
           <h3 className="text-center">Create an Account</h3>
           <p className="text-center mb-5 fs-5">Sign up here⬇️</p>
           <div className="row mb-4">
@@ -102,6 +103,8 @@ useEffect(() => {
           </div>
       </div>
   </div>
+    </div>
+  
   )
 }
 
