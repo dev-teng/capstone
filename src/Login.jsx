@@ -21,6 +21,12 @@ function Login () {
   const [password, setPassword] = useState('');
   let navigate = useNavigate();
 
+  const handleKeyDown = (e) => {
+    if(e.key === 'Enter') {
+      handleLogin();
+    }
+  }
+
   const handleLogin = () => {
     if(email !== '' && password !== '') {
       
@@ -56,7 +62,7 @@ function Login () {
 
   return(
   <div className="d-flex flex-column min-vh-100">
-    <div className="container-fluid mt-5" style={{width: "50rem", width: "100%"}}>
+    <div className="container-fluid mt-5" style={{width: "100%"}}>
         <div className="row justify-content-center">
             <div className="col-12 col-md-8 col-lg-6 p-3">
                 <div className="border p-5 mt-5 mb-5 rounded">
@@ -67,6 +73,7 @@ function Login () {
                     <input id="email" 
                       onChange={(e) => {setEmail(e.target.value)}}
                       value={email}
+                      onKeyDown={handleKeyDown}
                       type="email" className="form-control"
                     />
 
@@ -74,6 +81,7 @@ function Login () {
                     <input id="password"
                       onChange={(e) => {setPassword(e.target.value)}}
                       value={password} 
+                      onKeyDown={handleKeyDown}
                       type="password" className="form-control"
                     />
 

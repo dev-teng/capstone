@@ -22,6 +22,12 @@ useEffect(() => {
 
   let navigate = useNavigate();
 
+  const handleKeyDown = (e) => {
+    if(e.key === 'Enter') {
+      handleRegistration();
+    }
+  }
+
   const handleRegistration = () => {
     if(displayName !== "" && 
       email !== "" && 
@@ -59,7 +65,7 @@ useEffect(() => {
 
   return (
   <div className="d-flex flex-column min-vh-100">
-      <div className="container-fluid mt-5" style={{width: "50rem", width: "100%"}}>
+      <div className="container-fluid mt-5" style={{width: "100%"}}>
           <div className="row justify-content-center">
               <div className="col-12 col-md-8 col-lg-6 p-3">
                 <div className="border p-5 mt-5 rounded">
@@ -82,13 +88,15 @@ useEffect(() => {
                       <input id="email" 
                         onChange={(e) => {setEmail(e.target.value)}}
                         value={email}
-                        type="email" className="form-control mb-3"
+                        onKeyDown={handleKeyDown}
+                        type="email" className="form-control mb-3" 
                       />
 
                       <label htmlFor="password">Password</label>
                       <input id="password"
                         onChange={(e) => {setPassword(e.target.value)}}
                         value={password}
+                        onKeyDown={handleKeyDown}
                         type="password" className="form-control mb-3"
                       />
 
@@ -96,6 +104,7 @@ useEffect(() => {
                       <input id="confirmpassword"
                         onChange={(e) => {setConfirmPassword(e.target.value)}} 
                         value={confirmPassword}
+                        onKeyDown={handleKeyDown}
                         type="password" className="form-control mb-3"
                       />
 
