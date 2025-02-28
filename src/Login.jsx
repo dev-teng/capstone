@@ -37,7 +37,7 @@ function Login () {
         }).catch(() => {
           Swal.fire({
             title: "Error!",
-            text: "Invalid Email and Password",
+            text: "Invalid Email or Password",
             icon: "error",
             confirmButtonColor: "#dc3545"
           });
