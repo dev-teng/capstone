@@ -144,14 +144,14 @@ function Schedule() {
     <div className="container-fluid p-5 mt-5">
       <h1 className="text-center mb-5">Campgyup Reservation</h1>
 
-      <div className="border border-circle d-grid p-2 text-center mb-5" style={{width: "12rem"}}>
+      <div className="border border-circle d-flex flex-column align-items-center p-2 mb-5" style={{width: "11rem"}}>
         <span className="fw-bold">{userProfile.displayName}</span> 
         <span className="mb-2">{userProfile.email}</span> 
         <button onClick={logout} className="btn btn-dark btn-sm">Logout</button>
       </div>
 
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-12 col-md-6">
           <label>Name</label>
           <input 
             type="text" 
@@ -160,7 +160,7 @@ function Schedule() {
             onChange={(e) => setReservation({ ...reservation, name: e.target.value })}
           />
         </div>
-        <div className="col-md-6">
+        <div className="col-12 col-md-6">
           <label>Pax</label>
           <input 
             type="number" 
@@ -172,7 +172,7 @@ function Schedule() {
       </div>
 
       <div className="row mt-3">
-        <div className="col-md-6">
+        <div className="col-12 col-md-6">
           <label>Email</label>
           <input 
             type="email" 
@@ -181,7 +181,7 @@ function Schedule() {
             onChange={(e) => setReservation({ ...reservation, email: e.target.value })}
           />
         </div>
-        <div className="col-md-6">
+        <div className="col-12 col-md-6">
           <label>Contact</label>
           <input 
             type="tel" 
@@ -193,7 +193,7 @@ function Schedule() {
       </div>
 
       <div className="row mt-3">
-        <div className="col-md-6">
+        <div className="col-12 col-md-6">
           <label>Date</label>
           <input 
             type="date" 
@@ -220,37 +220,39 @@ function Schedule() {
       <hr />
       <h3 className="mt-5">Reservations List</h3>
 
-      <table className="table table-bordered mt-3">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Pax</th>
-            <th>Email</th>
-            <th>Contact</th>
-            <th>Date</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {reservationList.length > 0 ? (
-            reservationList.map((reservationRecord) => (
-              <tr key={reservationRecord.id}>
-                <td>{reservationRecord.name}</td>
-                <td>{reservationRecord.pax}</td>
-                <td>{reservationRecord.email}</td>
-                <td>{reservationRecord.contact}</td>
-                <td>{reservationRecord.date}</td>
-                <td><button onClick={() => handleDelete(reservationRecord.id)} className="btn btn-danger"> Delete</button>
-                </td>
-              </tr>
-            ))
-          ) : (
-            <tr>
-              <td colSpan="6" className="text-center">No Reservations</td>
-            </tr>
-          )}
-        </tbody>
-      </table>
+        <div className="table-responsive">
+          <table className="table table-bordered mt-3">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Pax</th>
+                  <th>Email</th>
+                  <th>Contact</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {reservationList.length > 0 ? (
+                  reservationList.map((reservationRecord) => (
+                    <tr key={reservationRecord.id}>
+                      <td>{reservationRecord.name}</td>
+                      <td>{reservationRecord.pax}</td>
+                      <td>{reservationRecord.email}</td>
+                      <td>{reservationRecord.contact}</td>
+                      <td>{reservationRecord.date}</td>
+                      <td><button onClick={() => handleDelete(reservationRecord.id)} className="btn btn-danger"> Delete</button>
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="6" className="text-center">No Reservations</td>
+                  </tr>
+                )}
+              </tbody>
+          </table>
+        </div>
     </div>
   );
 }
