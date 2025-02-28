@@ -58,7 +58,7 @@ useEffect(() => {
   };
 
   return (
-  <div className="container-fluid p-5" style={{width: "50rem"}}>
+  <div className="container-fluid p-5" style={{width: "50rem", width: "100%"}}>
       <div className="border p-5 m-5 rounded">
           <h3 className="text-center">Create an Account</h3>
           <p className="text-center mb-5 fs-5">Sign up here⬇️</p>

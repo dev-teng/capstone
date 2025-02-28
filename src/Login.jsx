@@ -3,6 +3,7 @@ import firebaseApp from "./firebaseConfig";
 import {getAuth, signInWithEmailAndPassword, onAuthStateChanged} from "firebase/auth";
 import { useState, useEffect } from "react";
 import Swal from 'sweetalert2';
+import "./Header.css";
 function Login () {
 
   useEffect(() => {
@@ -55,7 +56,7 @@ function Login () {
 
   return(
     <div className="d-flex flex-column min-vh-100">
-      <div className="container-fluid p-5" style={{width: "50rem"}}>
+      <div className="container-fluid p-5" style={{width: "50rem", width: "100%"}}>
       <div className="border p-5 m-5 rounded">
         <h1 className="text-center">Welcome to Campgyup</h1>
         <p className="text-center">Unli meats is just a click away 🤤.</p>
