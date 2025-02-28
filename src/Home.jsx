@@ -32,7 +32,7 @@ function Home() {
         </div>
 
          <div className="row mt-5 mb-5 g-0">
-          <div data-aos="fade-up" className="col-md-4">
+          <div data-aos="fade-up" className="col-md-4 mb-2">
             <div className="card h-100" >
               <img className="img-fluid" src="/images/beefPlain.webp" />
               <div className="card-body d-flex flex-column justify-content-between">
@@ -46,7 +46,7 @@ function Home() {
           </div>
 
 
-          <div data-aos="fade-up" className="col-md-4" >
+          <div data-aos="fade-up" className="col-md-4 mb-2" >
             <div className="card h-100" >
               <img className="img-fluid" src="/images/pork.png" />
               <div className="card-body d-flex flex-column justify-content-between">
@@ -59,7 +59,7 @@ function Home() {
             <AosAnimation />
           </div>
 
-          <div data-aos="fade-up" className="col-md-4">
+          <div data-aos="fade-up" className="col-md-4 mb-2">
             <div className="card h-100" >
               <img className="img-fluid" src="/images/chicken.avif" />
               <div className="card-body d-flex flex-column justify-content-between">
